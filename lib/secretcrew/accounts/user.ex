@@ -12,6 +12,7 @@ defmodule Secretcrew.Accounts.User do
     field :email, :string
     field :facebookId, :string
     field :name, :string
+    has_many :posts, Secretcrew.Feed.Post, foreign_key: :users_id
 
     timestamps()
   end
